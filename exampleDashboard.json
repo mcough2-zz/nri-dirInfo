@@ -1,7 +1,6 @@
 {
   "dashboard": {
-    "id": 329004,
-    "title": "NRI - SDK Testing",
+    "title": "Example",
     "icon": "bar-chart",
     "created_at": "2017-05-30T13:32:20Z",
     "updated_at": "2017-05-30T13:34:03Z",
