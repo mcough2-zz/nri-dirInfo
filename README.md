@@ -18,7 +18,7 @@ This is intended to be a super simple example
 # Installing this example
 Run this command (sudo is required) to install the integration.
 ```
-kahrens@envy5:~/dev/shell/dirInfo$ sudo sh install.sh 
+kahrens@envy5:~/dev/shell/dirInfo$ sudo sh install.sh
 All required files copied.
 Integration made into an executable.
 Infrastructure service restarted
@@ -29,7 +29,4 @@ This installer places all the files in the correct locations and then restarts t
 
 # Access the data
 The JSON that the integration sends back has the name of the event type in Insights where these metrics will be stored. This example puts data into `ComputeSample`. If you query Insights, you will see it:
-[query](https://insights.newrelic.com/accounts/726352/query?query=SELECT%20average(%60provider.dirSize%60)%20FROM%20ComputeSample%20WHERE%20%60provider.dirName%60%20%3D%20%27%2Fvar%2Flog%27%20SINCE%207%20DAYS%20AGO%20TIMESERIES)
-
-And this data can then be used in a dashboard like this:
-[dashboard](https://insights.newrelic.com/accounts/726352/dashboards/329004)
+SELECT average(`provider.dirSize`) FROM ComputeSample WHERE `provider.dirName` = '/var/log' SINCE 7 DAYS AGO TIMESERIES

@@ -1,0 +1,98 @@
+{
+  "dashboard": {
+    "id": 329004,
+    "title": "NRI - SDK Testing",
+    "icon": "bar-chart",
+    "created_at": "2017-05-30T13:32:20Z",
+    "updated_at": "2017-05-30T13:34:03Z",
+    "visibility": "all",
+    "editable": "editable_by_all",
+    "ui_url": "https://insights.newrelic.com/accounts/726352/dashboards/329004",
+    "api_url": "https://api.newrelic.com/v2/dashboards/329004",
+    "owner_email": "kahrens@newrelic.com",
+    "metadata": {
+      "version": 1
+    },
+    "widgets": [
+      {
+        "visualization": "line_chart",
+        "layout": {
+          "width": 2,
+          "height": 1,
+          "row": 1,
+          "column": 1
+        },
+        "account_id": 726352,
+        "data": [
+          {
+            "nrql": "SELECT average(`provider.dirSize`) FROM ComputeSample WHERE `provider.dirName` = '/var/log' SINCE 7 DAYS AGO TIMESERIES"
+          }
+        ],
+        "presentation": {
+          "title": "Size of /var/log",
+          "notes": null
+        }
+      },
+      {
+        "visualization": "billboard",
+        "layout": {
+          "width": 1,
+          "height": 1,
+          "row": 1,
+          "column": 3
+        },
+        "account_id": 726352,
+        "data": [
+          {
+            "nrql": "SELECT average(`provider.dirSize`) FROM ComputeSample WHERE `provider.dirName` = '/var/log' SINCE 7 DAYS AGO"
+          }
+        ],
+        "presentation": {
+          "title": "Size of /var/log",
+          "notes": null,
+          "threshold": {}
+        }
+      },
+      {
+        "visualization": "line_chart",
+        "layout": {
+          "width": 2,
+          "height": 1,
+          "row": 2,
+          "column": 1
+        },
+        "account_id": 726352,
+        "data": [
+          {
+            "nrql": "SELECT average(`provider.fileCount`) FROM ComputeSample WHERE `provider.dirName` = '/var/log' SINCE 7 DAYS AGO TIMESERIES"
+          }
+        ],
+        "presentation": {
+          "title": "File Count in /var/log",
+          "notes": null
+        }
+      },
+      {
+        "visualization": "billboard",
+        "layout": {
+          "width": 1,
+          "height": 1,
+          "row": 2,
+          "column": 3
+        },
+        "account_id": 726352,
+        "data": [
+          {
+            "nrql": "SELECT average(`provider.fileCount`) FROM ComputeSample WHERE `provider.dirName` = '/var/log' SINCE 7 DAYS AGO"
+          }
+        ],
+        "presentation": {
+          "title": "File Count in /var/log",
+          "notes": null,
+          "threshold": {}
+        }
+      }
+    ],
+    "filter": null
+  }
+}
