@@ -1,0 +1,11 @@
+name: com.adg.dirInfo
+protocol_version: 1
+description: Collect directory file count and total file size
+os: linux
+
+commands:
+  dir-metrics:
+    command:
+      - ./bin/dirInfo.sh
+    interval: 30
+    prefix: integration/custom/dirInfo

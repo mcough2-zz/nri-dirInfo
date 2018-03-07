@@ -1,0 +1,12 @@
+integration_name: com.adg.dirInfo
+
+instances:
+  - name: tmp_size
+    command: dir-metrics
+    arguments:
+      dir_name: /tmp
+
+  - name: var_log_size
+    command: dir-metrics
+    arguments:
+      dir_name: /var/log
